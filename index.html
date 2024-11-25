@@ -1,0 +1,2459 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mastery: From Beginner to Advanced</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Typewriter effect heading -->
+    <h1 id="typewriter"></h1>
+
+    <!-- Navbar with links (Initially hidden with opacity) -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" id="beginnerLink">Beginner</a></li>
+            <li><a href="#" id="intermediateLink">Intermediate</a></li>
+            <li><a href="#" id="advancedLink">Advanced</a></li>
+            <li><a href="https://www.thugcoding.com" target="_blank">ThugCoding</a></li>
+            <li><a href="https://www.yourblog.com" target="_blank">Blog</a></li>
+        </ul>
+    </nav>
+
+        <!-- Beginner Text and Quiz Etc -->
+
+    <div id="beginnerText" class="section hidden">      Ready, Nigga? <h2>Beginner CSS</h2>
+        <p><h1>1. Introduction to CSS</h1></p>  <p><strong>What is CSS?</strong>: Explain that CSS stands for "Cascading Style Sheets" and is used to control the layout and appearance of web pages.</p>
+        <p><strong>How CSS Works:</strong> Explain how CSS is used alongside HTML to style the content on a webpage.</p>
+        
+        <h3>Ways to Include CSS:</h3>
+        <ul>
+            <li><strong>Inline CSS:</strong> Styling directly within an HTML element.</li>
+            <li><strong>Internal CSS:</strong> CSS within a &lt;style&gt; tag in the HTML document.</li>
+            <li><strong>External CSS:</strong> Linking to an external .css file.</li>
+        </ul>
+        
+        <h2>2. Basic Syntax</h2>
+        <p><strong>CSS Rule Structure:</strong> Show how a CSS rule consists of a selector, property, and value.</p>
+        <pre>
+        selector {
+            property: value;
+        }
+        </pre>
+        <p><strong>Example:</strong></p>
+        <pre>
+        h1 {
+            color: blue;
+        }
+        </pre>
+        <p><strong>Selector:</strong> Targets the HTML element.</p>
+        <p><strong>Property:</strong> Defines the styling (e.g., color).</p>
+        <p><strong>Value:</strong> The value for the property (e.g., blue).</p>
+        
+        <h2>3. Selectors</h2>
+        <h3>Basic Selectors:</h3>
+        <ul>
+            <li><strong>Element Selectors:</strong> Selects HTML tags (e.g., &lt;h1&gt;, &lt;p&gt;).</li>
+            <li><strong>Class Selectors:</strong> Targets elements with a specific class using the <strong>.</strong> (dot) notation (e.g., .myClass).</li>
+            <li><strong>ID Selectors:</strong> Targets elements by their id using <strong>#</strong> (hash) notation (e.g., #myId).</li>
+        </ul>
+        <h3>Combining Selectors:</h3>
+        <ul>
+            <li><strong>Grouping Selectors:</strong> Applying the same styles to multiple elements (e.g., h1, h2, h3).</li>
+            <li><strong>Descendant Selectors:</strong> Targeting an element inside another element (e.g., div p).</li>
+        </ul>
+        
+        <h2>4. CSS Box Model</h2>
+        <p>Introduce the Box Model, which is fundamental to layout and spacing.</p>
+        <ul>
+            <li><strong>Content:</strong> The actual content inside the box.</li>
+            <li><strong>Padding:</strong> Space between the content and the border.</li>
+            <li><strong>Border:</strong> Surrounds the padding (or content if no padding).</li>
+            <li><strong>Margin:</strong> Space outside the border.</li>
+        </ul>
+        <p><strong>Example Diagram:</strong></p>
+        <pre>
+        +----------------------------+
+        |          Margin             |
+        | +------------------------+  |
+        | |        Border           |  |
+        | | +--------------------+ |  |
+        | | |     Padding         | |  |
+        | | | +----------------+  | |  |
+        | | | |  Content        |  | |  |
+        | | | +----------------+  | |  |
+        | | +--------------------+ |  |
+        | +------------------------+  |
+        +----------------------------+
+        </pre>
+        
+        <h2>5. Colors and Backgrounds</h2>
+        <p><strong>Setting Colors:</strong> How to apply colors using different formats:</p>
+        <ul>
+            <li><strong>Named Colors</strong> (e.g., red, blue).</li>
+            <li><strong>Hexadecimal</strong> (#ff0000 for red).</li>
+            <li><strong>RGB</strong> (rgb(255, 0, 0) for red).</li>
+            <li><strong>HSL</strong> (hsl(0, 100%, 50%) for red).</li>
+        </ul>
+        <p><strong>Backgrounds:</strong></p>
+        <ul>
+            <li><strong>Background Color:</strong> background-color.</li>
+            <li><strong>Background Images:</strong> background-image.</li>
+            <li><strong>Background Positioning:</strong> background-position, background-size.</li>
+        </ul>
+        
+        <h2>6. Typography</h2>
+        <h3>Font Properties:</h3>
+        <ul>
+            <li><strong>font-family:</strong> Set the font type (e.g., Arial, Courier New).</li>
+            <li><strong>font-size:</strong> Control the size of the text (e.g., 16px, 1.5em).</li>
+            <li><strong>font-weight:</strong> Control the thickness of the text (bold, normal, lighter).</li>
+            <li><strong>font-style:</strong> Set italic or normal text (italic, normal).</li>
+        </ul>
+        <h3>Text Styling:</h3>
+        <ul>
+            <li><strong>color:</strong> Set text color.</li>
+            <li><strong>text-align:</strong> Control text alignment (left, center, right).</li>
+            <li><strong>line-height:</strong> Adjust space between lines.</li>
+            <li><strong>text-decoration:</strong> Control underlining or strike-through (e.g., underline, none).</li>
+        </ul>
+        
+        <h2>7. Margins, Padding, and Borders</h2>
+        <ul>
+            <li><strong>Margin:</strong> How to use margin to create space around elements.</li>
+            <li><strong>Padding:</strong> How to use padding to create space within elements.</li>
+            <li><strong>Borders:</strong> Adding borders to elements (border: 1px solid black).</li>
+            <li><strong>Shorthand Properties:</strong> Using shorthand for setting margins, padding, and borders.</li>
+        </ul>
+        
+        <h2>8. Width, Height, and Display Properties</h2>
+        <h3>Setting Dimensions:</h3>
+        <ul>
+            <li><strong>width:</strong> Control the width of an element.</li>
+            <li><strong>height:</strong> Control the height of an element.</li>
+        </ul>
+        <h3>Display Property:</h3>
+        <ul>
+            <li><strong>block:</strong> Forces the element to take up the full width.</li>
+            <li><strong>inline:</strong> Keeps elements inline with others.</li>
+            <li><strong>inline-block:</strong> A combination of inline and block.</li>
+            <li><strong>none:</strong> Hides the element from the page.</li>
+        </ul>
+        
+        <h2>9. Positioning Elements</h2>
+        <ul>
+            <li><strong>Static:</strong> Default positioning.</li>
+            <li><strong>Relative:</strong> Position relative to its normal position.</li>
+            <li><strong>Absolute:</strong> Position relative to the nearest positioned ancestor.</li>
+            <li><strong>Fixed:</strong> Positioned relative to the viewport (doesn’t scroll with the page).</li>
+            <li><strong>Z-index:</strong> Control the layering of elements on top of each other.</li>
+        </ul>
+        
+        <h2>10. Introduction to Flexbox</h2>
+        <p>Give a basic introduction to Flexbox for beginners to layout content.</p>
+        <pre>
+        display: flex; /* Defines a flex container */
+        justify-content: flex-start; /* Aligns items horizontally */
+        align-items: center; /* Aligns items vertically */
+        flex-direction: row; /* Set the direction of the flex items */
+        </pre>
+        
+        <h2>11. CSS Comments</h2>
+        <p><strong>How to write comments in CSS:</strong></p>
+        <pre>
+        /* This is a comment in CSS */
+        </pre>
+        </p>
+
+            <!--BEGINNER QUIZ-->
+
+        <div class="quiz-container">
+            <h2>Beginner CSS Quiz (47 Questions)</h2>
+
+
+                 <!-- Question 1 -->
+                 <div class="question">
+                    <p>1. What does CSS stand for?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. Cascading Style Sheets</li>
+                        <li>B. Computer Style Sheets</li>
+                        <li>C. Colorful Style Sheets</li>
+                        <li>D. Creative Style Sheets</li>
+                    </ul>
+                </div>
+        
+                 <!-- Question 2 -->
+                 <div class="question">
+                    <p>2. Which HTML tag is used to define an internal style sheet?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. &lt;style&gt;</li>
+                        <li>B. &lt;css&gt;</li>
+                        <li>C. &lt;script&gt;</li>
+                        <li>D. &lt;stylesheet&gt;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. Which HTML attribute is used to define inline styles?</p>
+                    <ul class="answers">
+                        <li>A. class</li>
+                        <li><span class="checkbox"></span> B. style</li>
+                        <li>C. font</li>
+                        <li>D. styles</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 4 -->
+                <div class="question">
+                    <p>4. Which is the correct CSS syntax?</p>
+                    <ul class="answers">
+                        <li>A. {body: color=black;}</li>
+                        <li>B. body: {color=black;}</li>
+                        <li><span class="checkbox"></span> C. body {color: black;}</li>
+                        <li>D. {body: black;}</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 5 -->
+                <div class="question">
+                    <p>5. How do you add a background color in CSS?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. background-color: yellow;</li>
+                        <li>B. bgcolor: yellow;</li>
+                        <li>C. color: yellow;</li>
+                        <li>D. background: yellow;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 6 -->
+                <div class="question">
+                    <p>6. Which CSS property is used to change the text color of an element?</p>
+                    <ul class="answers">
+                        <li>A. font-color</li>
+                        <li><span class="checkbox"></span> B. color</li>
+                        <li>C. text-color</li>
+                        <li>D. background-color</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 7 -->
+                <div class="question">
+                    <p>7. How do you make all &lt;p&gt; elements bold?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. p {font-weight: bold;}</li>
+                        <li>B. p {font-style: bold;}</li>
+                        <li>C. p {text-size: bold;}</li>
+                        <li>D. p {font: bold;}</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 8 -->
+                <div class="question">
+                    <p>8. How do you center text in an element?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. text-align: center;</li>
+                        <li>B. align-text: center;</li>
+                        <li>C. text-align: middle;</li>
+                        <li>D. align: center;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 9 -->
+                <div class="question">
+                    <p>9. How do you add a comment in a CSS file?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. /* comment */</li>
+                        <li>B. // comment</li>
+                        <li>C. &lt;!-- comment --&gt;</li>
+                        <li>D. # comment</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 10 -->
+                <div class="question">
+                    <p>10. Which property is used to change the font of an element?</p>
+                    <ul class="answers">
+                        <li>A. font-weight</li>
+                        <li><span class="checkbox"></span> B. font-family</li>
+                        <li>C. font-style</li>
+                        <li>D. text-style</li>
+                    </ul>
+                </div>
+        
+                <div class="question">
+                    <p>11. How do you make the text uppercase in CSS?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. text-transform: uppercase;</li>
+                        <li>B. text-style: uppercase;</li>
+                        <li>C. transform-text: uppercase;</li>
+                        <li>D. uppercase: text;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 12 -->
+                <div class="question">
+                    <p>12. How do you change the margin of an element in CSS?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. margin: 10px;</li>
+                        <li>B. padding: 10px;</li>
+                        <li>C. spacing: 10px;</li>
+                        <li>D. border-margin: 10px;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 13 -->
+                <div class="question">
+                    <p>13. What is the default value of the position property in CSS?</p>
+                    <ul class="answers">
+                        <li>A. absolute</li>
+                        <li>B. relative</li>
+                        <li><span class="checkbox"></span> C. static</li>
+                        <li>D. fixed</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 14 -->
+                <div class="question">
+                    <p>14. How do you remove underlining from links?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. a {text-decoration: none;}</li>
+                        <li>B. a {decoration: no-underline;}</li>
+                        <li>C. a {font-decoration: none;}</li>
+                        <li>D. a {underline: none;}</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 15 -->
+                <div class="question">
+                    <p>15. How do you select an element with an id of "header"?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. #header</li>
+                        <li>B. .header</li>
+                        <li>C. header</li>
+                        <li>D. *header</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 16 -->
+                <div class="question">
+                    <p>16. Which CSS property is used to change the spacing between lines of text?</p>
+                    <ul class="answers">
+                        <li>A. letter-spacing</li>
+                        <li><span class="checkbox"></span> B. line-height</li>
+                        <li>C. spacing</li>
+                        <li>D. word-spacing</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 17 -->
+                <div class="question">
+                    <p>17. How do you make the background image repeat only horizontally?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. background-repeat: repeat-x;</li>
+                        <li>B. background-repeat: repeat-y;</li>
+                        <li>C. background-repeat: horizontally;</li>
+                        <li>D. background-repeat: no-repeat;</li>
+                    </ul>
+                </div>
+        
+                <!-- Question 18 -->
+                <div class="question">
+                    <p>18. Which property is used to specify the width of an element’s border?</p>
+                    <ul class="answers">
+                        <li><span class="checkbox"></span> A. border-width</li>
+                        <li>B. border-style</li>
+                        <li>C. border-thickness</li>
+                        <li>D. border-padding</li>
+                    </ul>
+                </div>
+        
+                        <!-- Question 18 -->
+                        <div class="question">
+                            <p>19. How do you create space between the border and the content of an element??</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. padding</li>
+                                <li>B. margin</li>
+                                <li>C.  border-spacing</li>
+                                <li>D. line-spacing</li>
+                            </ul>
+                        </div>
+        
+                        <!-- Question 18 -->
+                        <div class="question">
+                            <p>20. How do you create a class selector in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. .classname</li>
+                                <li>B. #classname</li>
+                                <li>C. classname</li>
+                                <li>D. *classname</li>
+                            </ul>
+                        </div>
+        
+                        <!-- Question 21 -->
+                        <div class="question">
+                            <p>21. How do you set the font size to 20px in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. font-size: 20px;</li>
+                                <li>B. size: 20px;</li>
+                                <li>C. text-size: 20px;</li>
+                                <li>D. font-style: 20px;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 22 -->
+                        <div class="question">
+                            <p>22. How do you hide an element in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. display: none;</li>
+                                <li>B. visibility: none;</li>
+                                <li>C. hide: element;</li>
+                                <li>D. display: hidden;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 23 -->
+                        <div class="question">
+                            <p>23. How do you specify a border with rounded corners in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. border-radius: 10px;</li>
+                                <li>B. border-corner: 10px;</li>
+                                <li>C. border-rounded: 10px;</li>
+                                <li>D. border-style: rounded;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 24 -->
+                        <div class="question">
+                            <p>24. Which property is used to add a shadow behind text?</p>
+                            <ul class="answers">
+                                <li>A. box-shadow</li>
+                                <li><span class="checkbox"></span> B. text-shadow</li>
+                                <li>C. font-shadow</li>
+                                <li>D. shadow-text</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 25 -->
+                        <div class="question">
+                            <p>25. How do you apply a specific font family for a webpage?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. font-family: Arial, sans-serif;</li>
+                                <li>B. font: Arial;</li>
+                                <li>C. font-style: Arial;</li>
+                                <li>D. text-family: Arial;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 26 -->
+                        <div class="question">
+                            <p>26. What is the correct way to apply multiple CSS classes to an element?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. &lt;div class="class1 class2"&gt;</li>
+                                <li>B. &lt;div class="class1, class2"&gt;</li>
+                                <li>C. &lt;div class="class1; class2"&gt;</li>
+                                <li>D. &lt;div class="class1.class2"&gt;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 27 -->
+                        <div class="question">
+                            <p>27. How do you make a list of items appear horizontally in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. display: inline;</li>
+                                <li>B. display: block;</li>
+                                <li>C. display: inline-block;</li>
+                                <li>D. display: list-inline;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 28 -->
+                        <div class="question">
+                            <p>28. How do you change the transparency of an element in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. opacity: 0.5;</li>
+                                <li>B. transparent: 0.5;</li>
+                                <li>C. visibility: 0.5;</li>
+                                <li>D. transparency: 50%;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 29 -->
+                        <div class="question">
+                            <p>29. Which property is used to control the order of items in a flex container?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. order;</li>
+                                <li>B. position;</li>
+                                <li>C. align-order;</li>
+                                <li>D. flex-order;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 30 -->
+                        <div class="question">
+                            <p>30. What is the purpose of the z-index property?</p>
+                            <ul class="answers">
+                                <li>A. To set the position of an element in a 3D space</li>
+                                <li><span class="checkbox"></span> B. To determine the stack order of elements</li>
+                                <li>C. To align elements along the z-axis</li>
+                                <li>D. To scale elements</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 31 -->
+                        <div class="question">
+                            <p>31. How do you make an image responsive in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. max-width: 100%;</li>
+                                <li>B. width: auto;</li>
+                                <li>C. img-responsive;</li>
+                                <li>D. width: responsive;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 32 -->
+                        <div class="question">
+                            <p>32. Which value of the position property will make an element stay in the same place even when scrolling the page?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. fixed;</li>
+                                <li>B. absolute;</li>
+                                <li>C. relative;</li>
+                                <li>D. static;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 33 -->
+                        <div class="question">
+                            <p>33. Which property is used to define the space between the border and the element’s content?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. padding;</li>
+                                <li>B. margin;</li>
+                                <li>C. border-spacing;</li>
+                                <li>D. line-spacing;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 34 -->
+                        <div class="question">
+                            <p>34. How do you make text italic in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. font-style: italic;</li>
+                                <li>B. font-weight: italic;</li>
+                                <li>C. text-style: italic;</li>
+                                <li>D. style: italic;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 35 -->
+                        <div class="question">
+                            <p>35. What does vw stand for in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. Viewport width</li>
+                                <li>B. Virtual width</li>
+                                <li>C. Vertical width</li>
+                                <li>D. Visible width</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 36 -->
+                        <div class="question">
+                            <p>36. Which CSS property is used to change the appearance of a list marker?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. list-style-type;</li>
+                                <li>B. list-type;</li>
+                                <li>C. marker-style;</li>
+                                <li>D. list-decoration;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 37 -->
+                        <div class="question">
+                            <p>37. How do you float an element to the left in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. float: left;</li>
+                                <li>B. float: none;</li>
+                                <li>C. position: left;</li>
+                                <li>D. align: left;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 38 -->
+                        <div class="question">
+                            <p>38. How do you prevent an element from being clickable?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. pointer-events: none;</li>
+                                <li>B. click: false;</li>
+                                <li>C. disable-click: true;</li>
+                                <li>D. display: no-click;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 39 -->
+                        <div class="question">
+                            <p>39. How do you make text align to the right in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. text-align: right;</li>
+                                <li>B. align-right: text;</li>
+                                <li>C. align: right;</li>
+                                <li>D. justify: right;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 40 -->
+                        <div class="question">
+                            <p>40. Which property allows you to specify the spacing between letters?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. letter-spacing;</li>
+                                <li>B. word-spacing;</li>
+                                <li>C. text-spacing;</li>
+                                <li>D. line-spacing;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 41 -->
+                        <div class="question">
+                            <p>41. How do you make a border dashed?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. border-style: dashed;</li>
+                                <li>B. border-type: dashed;</li>
+                                <li>C. border-decoration: dashed;</li>
+                                <li>D. border-line: dashed;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 42 -->
+                        <div class="question">
+                            <p>42. How do you center a block element horizontally?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. margin: 0 auto;</li>
+                                <li>B. padding: center;</li>
+                                <li>C. align: center;</li>
+                                <li>D. text-align: center;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 43 -->
+                        <div class="question">
+                            <p>43. How do you make an element invisible but still occupy space?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. visibility: hidden;</li>
+                                <li>B. display: none;</li>
+                                <li>C. opacity: 0;</li>
+                                <li>D. visibility: none;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 44 -->
+                        <div class="question">
+                            <p>44. What does rem stand for in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. Root em</li>
+                                <li>B. Real em</li>
+                                <li>C. Relative em</li>
+                                <li>D. Reference em</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 45 -->
+                        <div class="question">
+                            <p>45. How do you select an element by attribute in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. [attribute]</li>
+                                <li>B. #attribute</li>
+                                <li>C. .attribute</li>
+                                <li>D. *attribute</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 46 -->
+                        <div class="question">
+                            <p>46. How do you apply bold text in CSS?</p>
+                            <ul class="answers">
+                                <li><span class="checkbox"></span> A. font-weight: bold;</li>
+                                <li>B. font: bold;</li>
+                                <li>C. font-style: bold;</li>
+                                <li>D. text-weight: bold;</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Question 47 -->
+                        <div class="question">
+                            <p>47. What is the default value of the display property?</p>
+                            <ul class="answers">
+                                <li>A. block</li>
+                                <li>B. inline</li>
+                                <li>C. inline-block</li>
+                                <li><span class="checkbox"></span> D. inline or block (depending on the element)</li>
+                            </ul>
+                        </div>
+        
+               <p></p>
+            
+            </div>
+            
+
+
+
+
+
+
+<!--quiz div-->        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Intermediate Text and Quiz Etc -->
+    <div id="intermediateText" class="section hidden">Alright, My Nigga. Section 2 <h1>Intermediate CSS</h1>
+
+        <h2>1. CSS Specificity</h2>
+        <p>CSS specificity determines which CSS rule is applied by the browser when multiple rules target the same element. Specificity is calculated based on the types of selectors used.</p>
+        <ul>
+            <li><strong>Inline Styles:</strong> Highest specificity.</li>
+            <li><strong>ID Selectors:</strong> Higher specificity than class and element selectors.</li>
+            <li><strong>Class Selectors:</strong> Moderate specificity.</li>
+            <li><strong>Element Selectors:</strong> Lower specificity.</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre>
+        #myId {
+            color: red;
+        }
+        .myClass {
+            color: blue;
+        }
+        p {
+            color: green;
+        }
+        </pre>
+        <p>If a paragraph element (&lt;p&gt;) has both a class and an ID applied to it, the ID selector will take precedence.</p>
+        
+        <h2>2. The Cascade and Inheritance</h2>
+        <p>The cascade is how CSS applies rules according to importance (source order) and specificity. Some properties are inherited from parent elements, and others are not.</p>
+        <ul>
+            <li><strong>Cascade:</strong> Determines which rule wins when rules conflict.</li>
+            <li><strong>Inheritance:</strong> Certain properties, such as color and font-family, are inherited by child elements, while others like padding and margin are not.</li>
+        </ul>
+        
+        <h2>3. Pseudo-classes and Pseudo-elements</h2>
+        <p>Pseudo-classes and pseudo-elements allow you to style elements based on their state or add styles to parts of an element.</p>
+        <ul>
+            <li><strong>Pseudo-classes:</strong> Target elements in a specific state (e.g., :hover, :focus, :nth-child).</li>
+            <li><strong>Pseudo-elements:</strong> Style specific parts of elements (e.g., ::before, ::after, ::first-line).</li>
+        </ul>
+        <p><strong>Example of pseudo-class:</strong></p>
+        <pre>
+        a:hover {
+            color: red;
+        }
+        </pre>
+        <p><strong>Example of pseudo-element:</strong></p>
+        <pre>
+        p::first-line {
+            font-weight: bold;
+        }
+        </pre>
+        
+        <h2>4. CSS Positioning</h2>
+        <p>Understanding CSS positioning is essential for controlling the layout of elements.</p>
+        <ul>
+            <li><strong>Relative Positioning:</strong> Moves an element relative to its original position.</li>
+            <li><strong>Absolute Positioning:</strong> Moves an element in relation to the nearest positioned ancestor (not static).</li>
+            <li><strong>Fixed Positioning:</strong> Fixes an element relative to the viewport (it stays in place while scrolling).</li>
+            <li><strong>Sticky Positioning:</strong> Toggles between relative and fixed positioning, depending on the scroll position.</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre>
+        div {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+        </pre>
+        
+        <h2>5. CSS Transitions</h2>
+        <p>CSS transitions allow you to change property values smoothly over a specified duration.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <pre>
+        element {
+            transition: property duration timing-function delay;
+        }
+        </pre>
+        <p><strong>Example:</strong></p>
+        <pre>
+        button {
+            background-color: blue;
+            transition: background-color 0.5s ease;
+        }
+        button:hover {
+            background-color: green;
+        }
+        </pre>
+        
+        <h2>6. CSS Animations</h2>
+        <p>CSS animations allow you to create more complex animations than transitions by defining keyframes.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <pre>
+        @keyframes myAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        element {
+            animation: myAnimation 2s ease-in-out infinite;
+        }
+        </pre>
+        
+        <h2>7. CSS Flexbox</h2>
+        <p>The Flexbox layout is designed to help you distribute space and align items within a container.</p>
+        <ul>
+            <li><strong>Flex Container:</strong> The parent element with <code>display: flex;</code>.</li>
+            <li><strong>Flex Items:</strong> The children of the flex container.</li>
+        </ul>
+        <p><strong>Flex Properties for the Container:</strong></p>
+        <ul>
+            <li><strong>flex-direction:</strong> Defines the direction of the flex items (row, column).</li>
+            <li><strong>justify-content:</strong> Aligns items horizontally (start, center, space-between).</li>
+            <li><strong>align-items:</strong> Aligns items vertically (stretch, center, flex-start).</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        </pre>
+        
+        <h2>8. CSS Grid</h2>
+        <p>CSS Grid is a layout system designed for two-dimensional layouts, allowing you to position elements into rows and columns.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <pre>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
+        </pre>
+        <p><strong>Grid Properties:</strong></p>
+        <ul>
+            <li><strong>grid-template-columns:</strong> Defines the number and size of columns.</li>
+            <li><strong>grid-template-rows:</strong> Defines the number and size of rows.</li>
+            <li><strong>grid-gap:</strong> Adds space between the grid items.</li>
+        </ul>
+        
+        <h2>9. Media Queries</h2>
+        <p>Media queries allow you to apply different styles depending on the device's screen size or capabilities.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <pre>
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        </pre>
+        
+        <h2>10. Responsive Design</h2>
+        <p>Responsive design ensures your website works well on different devices and screen sizes by using flexible layouts, media queries, and other techniques.</p>
+        <ul>
+            <li><strong>Fluid Layouts:</strong> Use relative units like percentages for widths.</li>
+            <li><strong>Media Queries:</strong> Apply different styles based on device size or other features.</li>
+            <li><strong>Flexible Images:</strong> Ensure images scale properly within their containers.</li>
+        </ul>
+
+
+            <!--BEGINNER QUIZ-->
+
+            <div class="quiz-container">
+                <h2>Intermediate CSS Quiz (60 Questions)</h2>
+    
+    
+                     <!-- Question 1 -->
+                         <!-- Question 1 -->
+    <div class="question">
+        <p>1. What does the display: flex; property do in CSS?</p>
+        <ul class="answers">
+            <li>A. Makes an element a grid container</li>
+            <li>B. Makes an element a block-level element</li>
+            <li><span class="checkbox"></span> C. Makes an element a flex container</li>
+            <li>D. Makes an element an inline-level element</li>
+        </ul>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>2. How do you align items to the center vertically in a flex container?</p>
+        <ul class="answers">
+            <li>A. justify-content: center;</li>
+            <li><span class="checkbox"></span> B. align-items: center;</li>
+            <li>C. align-self: center;</li>
+            <li>D. vertical-align: middle;</li>
+        </ul>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3. Which property is used to specify the direction of items in a flex container?</p>
+        <ul class="answers">
+            <li>A. align-items</li>
+            <li>B. flex-wrap</li>
+            <li><span class="checkbox"></span> C. flex-direction</li>
+            <li>D. justify-content</li>
+        </ul>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <p>4. What is the default value of flex-direction?</p>
+        <ul class="answers">
+            <li>A. column</li>
+            <li><span class="checkbox"></span> B. row</li>
+            <li>C. row-reverse</li>
+            <li>D. column-reverse</li>
+        </ul>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <p>5. Which property is used to allow items to wrap onto multiple lines in a flex container?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. flex-wrap</li>
+            <li>B. wrap-items</li>
+            <li>C. wrap-direction</li>
+            <li>D. multi-line</li>
+        </ul>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <p>6. How do you define a grid container in CSS?</p>
+        <ul class="answers">
+            <li>A. display: block;</li>
+            <li>B. display: flex;</li>
+            <li><span class="checkbox"></span> C. display: grid;</li>
+            <li>D. display: inline-grid;</li>
+        </ul>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <p>7. Which property defines the number and size of columns in a grid layout?</p>
+        <ul class="answers">
+            <li>A. grid-template-rows</li>
+            <li>B. grid-column-start</li>
+            <li>C. grid-auto-columns</li>
+            <li><span class="checkbox"></span> D. grid-template-columns</li>
+        </ul>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <p>8. How do you set a gap between grid items in a grid container?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-gap</li>
+            <li>B. grid-spacing</li>
+            <li>C. gap-size</li>
+            <li>D. spacing-grid</li>
+        </ul>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <p>9. How do you span an item across multiple columns in a grid layout?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-column: span 2;</li>
+            <li>B. grid-column: 2;</li>
+            <li>C. grid-row: span 2;</li>
+            <li>D. grid-column-start: 2;</li>
+        </ul>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <p>10. Which property is used to control the alignment of grid items along the row axis?</p>
+        <ul class="answers">
+            <li>A. align-items</li>
+            <li>B. align-content</li>
+            <li><span class="checkbox"></span> C. justify-content</li>
+            <li>D. grid-align</li>
+        </ul>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+        <p>11. How do you create a responsive layout in CSS?</p>
+        <ul class="answers">
+            <li>A. Using only width: 100px;</li>
+            <li><span class="checkbox"></span> B. Using @media queries</li>
+            <li>C. Using position: absolute;</li>
+            <li>D. Using z-index</li>
+        </ul>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+        <p>12. What is the syntax to write a media query for a screen width of 768px?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. @media (max-width: 768px) {}</li>
+            <li>B. @media width(768px) {}</li>
+            <li>C. @media (min-width: 768px) {}</li>
+            <li>D. @media screen 768px {}</li>
+        </ul>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+        <p>13. Which CSS function is used to calculate width dynamically based on the viewport size?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. vw</li>
+            <li>B. vh</li>
+            <li>C. calc()</li>
+            <li>D. em</li>
+        </ul>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+        <p>14. Which CSS property is used to specify grid lines where items start and end?</p>
+        <ul class="answers">
+            <li>A. grid-lines</li>
+            <li>B. grid-start</li>
+            <li>C. grid-area</li>
+            <li><span class="checkbox"></span> D. grid-template-areas</li>
+        </ul>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+        <p>15. What does justify-content: space-between; do in a flex container?</p>
+        <ul class="answers">
+            <li>A. Distributes items with equal spacing around them</li>
+            <li><span class="checkbox"></span> B. Distributes items with equal space between them</li>
+            <li>C. Aligns items to the start of the container</li>
+            <li>D. Aligns items to the end of the container</li>
+        </ul>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question">
+        <p>16. How do you create a fixed-width sidebar and a flexible content area using Flexbox?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Use flex-grow: 0; for the sidebar and flex-grow: 1; for the content</li>
+            <li>B. Use position: fixed; for the sidebar</li>
+            <li>C. Use display: block; for both elements</li>
+            <li>D. Use width: auto; for the content</li>
+        </ul>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question">
+        <p>17. What does minmax() do in CSS Grid?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Defines the minimum and maximum size of a grid track</li>
+            <li>B. Defines the number of columns</li>
+            <li>C. Aligns grid items vertically</li>
+            <li>D. Automatically sizes items</li>
+        </ul>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question">
+        <p>18. Which unit is relative to the width of the viewport in CSS?</p>
+        <ul class="answers">
+            <li>A. em</li>
+            <li>B. px</li>
+            <li><span class="checkbox"></span> C. vw</li>
+            <li>D. vh</li>
+        </ul>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question">
+        <p>19. How do you make an element occupy multiple rows in a grid layout?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-row: span 2;</li>
+            <li>B. grid-column: 2;</li>
+            <li>C. grid-area: row-span;</li>
+            <li>D. grid-gap: 2;</li>
+        </ul>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question">
+        <p>20. What does align-self do in Flexbox?</p>
+        <ul class="answers">
+            <li>A. Aligns all flex items</li>
+            <li><span class="checkbox"></span> B. Aligns a single flex item</li>
+            <li>C. Aligns the flex container</li>
+            <li>D. Aligns flex items along the baseline</li>
+        </ul>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="question">
+        <p>21. What is the use of calc() in CSS?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. To perform calculations to determine CSS property values</li>
+            <li>B. To calculate the width of grid tracks</li>
+            <li>C. To calculate spacing between flex items</li>
+            <li>D. To dynamically set font sizes</li>
+        </ul>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question">
+        <p>22. What is the default value of the flex-wrap property?</p>
+        <ul class="answers">
+            <li>A. wrap</li>
+            <li><span class="checkbox"></span> B. nowrap</li>
+            <li>C. wrap-reverse</li>
+            <li>D. reverse-wrap</li>
+        </ul>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="question">
+        <p>23. How do you control the order of items in a flex container?</p>
+        <ul class="answers">
+            <li>A. align-order</li>
+            <li>B. item-order</li>
+            <li>C. flex-order</li>
+            <li><span class="checkbox"></span> D. order</li>
+        </ul>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="question">
+        <p>24. Which of the following is a CSS Grid function that repeats values?</p>
+        <ul class="answers">
+            <li>A. grid-repeat</li>
+            <li><span class="checkbox"></span> B. repeat()</li>
+            <li>C. grid-auto</li>
+            <li>D. repeat-grid</li>
+        </ul>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="question">
+        <p>25. How do you specify that an element should span across all columns in a grid layout?</p>
+        <ul class="answers">
+            <li>A. grid-column: span all;</li>
+            <li><span class="checkbox"></span> B. grid-column: span 999;</li>
+            <li>C. grid-column: span max;</li>
+            <li>D. grid-column: auto;</li>
+        </ul>
+    </div>
+
+    <!-- Question 26 -->
+    <div class="question">
+        <p>26. What is the purpose of align-content in Flexbox?</p>
+        <ul class="answers">
+            <li>A. Aligns the content inside each flex item</li>
+            <li><span class="checkbox"></span> B. Aligns flex items when there is extra space in the cross axis</li>
+            <li>C. Aligns the text inside flex items</li>
+            <li>D. Aligns items along the row axis</li>
+        </ul>
+    </div>
+
+    <!-- Question 27 -->
+    <div class="question">
+        <p>27. How do you create a flexible layout with multiple breakpoints?</p>
+        <ul class="answers">
+            <li>A. Using z-index</li>
+            <li><span class="checkbox"></span> B. Using @media queries</li>
+            <li>C. Using grid-gap</li>
+            <li>D. Using minmax()</li>
+        </ul>
+    </div>
+
+    <!-- Question 28 -->
+    <div class="question">
+        <p>28. Which of the following is a feature of grid-auto-flow?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Controls how the auto-placed items are inserted into the grid</li>
+            <li>B. Automatically resizes the grid</li>
+            <li>C. Aligns grid items to the center</li>
+            <li>D. Stretches the grid container</li>
+        </ul>
+    </div>
+
+    <!-- Question 29 -->
+    <div class="question">
+        <p>29. What does flex-grow: 1; do in a flex container?</p>
+        <ul class="answers">
+            <li>A. Shrinks the item</li>
+            <li><span class="checkbox"></span> B. Expands the item to fill the available space</li>
+            <li>C. Wraps the item onto a new row</li>
+            <li>D. Centers the item</li>
+        </ul>
+    </div>
+
+    <!-- Question 30 -->
+    <div class="question">
+        <p>30. How do you change the alignment of grid items in a grid container?</p>
+        <ul class="answers">
+            <li>A. grid-align</li>
+            <li><span class="checkbox"></span> B. align-items</li>
+            <li>C. align-grid</li>
+            <li>D. grid-justify</li>
+        </ul>
+    </div>
+
+    <!-- Question 31 -->
+    <div class="question">
+        <p>31. Which of the following properties is used to specify where an item will end in a grid layout?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-column-end</li>
+            <li>B. grid-column-start</li>
+            <li>C. grid-row-start</li>
+            <li>D. grid-span</li>
+        </ul>
+    </div>
+
+    <!-- Question 32 -->
+    <div class="question">
+        <p>32. What does flex-basis control?</p>
+        <ul class="answers">
+            <li>A. The minimum size of a flex item</li>
+            <li><span class="checkbox"></span> B. The size of a flex item before it grows or shrinks</li>
+            <li>C. The space between flex items</li>
+            <li>D. The order of flex items</li>
+        </ul>
+    </div>
+
+    <!-- Question 33 -->
+    <div class="question">
+        <p>33. What happens when you use repeat() in CSS Grid?</p>
+        <ul class="answers">
+            <li>A. It repeats grid items in the container</li>
+            <li><span class="checkbox"></span> B. It repeats the grid layout definition</li>
+            <li>C. It repeats media queries</li>
+            <li>D. It repeats flex items</li>
+        </ul>
+    </div>
+
+    <!-- Question 34 -->
+    <div class="question">
+        <p>34. How do you align flex items to the bottom of the container?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. align-items: flex-end;</li>
+            <li>B. align-content: center;</li>
+            <li>C. justify-content: center;</li>
+            <li>D. align-self: flex-start;</li>
+        </ul>
+    </div>
+
+    <!-- Question 35 -->
+    <div class="question">
+        <p>35. Which CSS unit is relative to the height of the viewport?</p>
+        <ul class="answers">
+            <li>A. em</li>
+            <li>B. vw</li>
+            <li><span class="checkbox"></span> C. vh</li>
+            <li>D. rem</li>
+        </ul>
+    </div>
+
+    <!-- Question 36 -->
+    <div class="question">
+        <p>36. What does grid-template-areas do in CSS Grid?</p>
+        <ul class="answers">
+            <li>A. Defines grid lines for placement</li>
+            <li><span class="checkbox"></span> B. Defines a grid layout using named areas</li>
+            <li>C. Creates columns with predefined width</li>
+            <li>D. Positions grid items vertically</li>
+        </ul>
+    </div>
+
+    <!-- Question 37 -->
+    <div class="question">
+        <p>37. How do you define a flexible row in CSS Grid that adapts to content size?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-template-rows: auto;</li>
+            <li>B. grid-template-rows: fixed;</li>
+            <li>C. grid-template-columns: auto;</li>
+            <li>D. grid-auto: 1fr;</li>
+        </ul>
+    </div>
+
+    <!-- Question 38 -->
+    <div class="question">
+        <p>38. What does the @supports rule do in CSS?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Tests if a browser supports specific CSS features</li>
+            <li>B. Runs media queries in the background</li>
+            <li>C. Loads fallback CSS</li>
+            <li>D. Resets browser styles</li>
+        </ul>
+    </div>
+
+    <!-- Question 39 -->
+    <div class="question">
+        <p>39. How do you align a grid item both horizontally and vertically in the center of a grid container?</p>
+        <ul class="answers">
+            <li>A. align-items: center; justify-content: center;</li>
+            <li><span class="checkbox"></span> B. place-items: center;</li>
+            <li>C. grid-align: center;</li>
+            <li>D. grid-place: center;</li>
+        </ul>
+    </div>
+
+    <!-- Question 40 -->
+    <div class="question">
+        <p>40. Which of the following properties defines how the content of a flex container should be distributed along the main axis?</p>
+        <ul class="answers">
+            <li>A. align-content</li>
+            <li>B. align-items</li>
+            <li><span class="checkbox"></span> C. justify-content</li>
+            <li>D. content-align</li>
+        </ul>
+    </div>
+
+    <!-- Question 41 -->
+    <div class="question">
+        <p>41. What is the function of the object-fit property in CSS?</p>
+        <ul class="answers">
+            <li>A. Aligns flex items</li>
+            <li><span class="checkbox"></span> B. Resizes an element to fit its container</li>
+            <li>C. Adjusts the size of grid tracks</li>
+            <li>D. Defines the order of grid items</li>
+        </ul>
+    </div>
+
+    <!-- Question 42 -->
+    <div class="question">
+        <p>42. How do you reverse the order of items in a flex container?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. flex-direction: row-reverse;</li>
+            <li>B. justify-content: reverse;</li>
+            <li>C. align-content: reverse;</li>
+            <li>D. align-items: reverse;</li>
+        </ul>
+    </div>
+
+    <!-- Question 43 -->
+    <div class="question">
+        <p>43. How do you create a grid with a 3-column layout and auto-sized rows?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: auto;</li>
+            <li>B. grid-template-rows: 1fr 1fr 1fr;</li>
+            <li>C. grid-template-columns: auto auto auto;</li>
+            <li>D. grid-columns: repeat(3, auto);</li>
+        </ul>
+    </div>
+
+    <!-- Question 44 -->
+    <div class="question">
+        <p>44. What does flex-shrink: 0; do in Flexbox?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Prevents a flex item from shrinking</li>
+            <li>B. Expands the flex item to fill available space</li>
+            <li>C. Shrinks the flex container</li>
+            <li>D. Aligns flex items in reverse</li>
+        </ul>
+    </div>
+
+    <!-- Question 45 -->
+    <div class="question">
+        <p>45. What does grid-auto-flow: dense; do?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Packs grid items into unused spaces</li>
+            <li>B. Prevents grid items from overlapping</li>
+            <li>C. Aligns grid items horizontally</li>
+            <li>D. Resizes grid items</li>
+        </ul>
+    </div>
+
+    <!-- Question 46 -->
+    <div class="question">
+        <p>46. How do you make a flex item take up twice the space of another item?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. flex-grow: 2;</li>
+            <li>B. flex-order: 2;</li>
+            <li>C. flex-shrink: 0;</li>
+            <li>D. flex-basis: 2;</li>
+        </ul>
+    </div>
+
+    <!-- Question 47 -->
+    <div class="question">
+        <p>47. What does grid-auto-columns do in a grid layout?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Automatically adds columns to fill available space</li>
+            <li>B. Automatically resizes grid columns</li>
+            <li>C. Repeats grid columns in the layout</li>
+            <li>D. Defines how grid items are positioned in rows</li>
+        </ul>
+    </div>
+
+    <!-- Question 48 -->
+    <div class="question">
+        <p>48. What is the default value of justify-content in a Flexbox container?</p>
+        <ul class="answers">
+            <li>A. center</li>
+            <li>B. space-between</li>
+            <li><span class="checkbox"></span> C. flex-start</li>
+            <li>D. flex-end</li>
+        </ul>
+    </div>
+
+    <!-- Question 49 -->
+    <div class="question">
+        <p>49. How do you apply CSS rules only if the browser supports grid layout?</p>
+        <ul class="answers">
+            <li>A. @media (supports-grid: true)</li>
+            <li><span class="checkbox"></span> B. @supports (display: grid) {}</li>
+            <li>C. @grid-supports (display)</li>
+            <li>D. @grid</li>
+        </ul>
+    </div>
+
+    <!-- Question 50 -->
+    <div class="question">
+        <p>50. What does the content-visibility property do in CSS?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Allows content to be hidden until scrolled into view</li>
+            <li>B. Shows or hides flex items</li>
+            <li>C. Aligns content in the grid container</li>
+            <li>D. Makes content visible</li>
+        </ul>
+    </div>
+
+        <!-- Question 51 -->
+        <div class="question">
+            <p>51. How do you adjust the height of a grid item?</p>
+            <ul class="answers">
+                <li>A. grid-row: span 2;</li>
+                <li>B. grid-auto-rows: auto;</li>
+                <li>C. height: auto;</li>
+                <li><span class="checkbox"></span> D. grid-row-start: 2;</li>
+            </ul>
+        </div>
+    
+        <!-- Question 52 -->
+        <div class="question">
+            <p>52. What does flex-flow control in Flexbox?</p>
+            <ul class="answers">
+                <li>A. The alignment of flex items</li>
+                <li><span class="checkbox"></span> B. The direction and wrap of flex items</li>
+                <li>C. The space between flex items</li>
+                <li>D. The size of flex items</li>
+            </ul>
+        </div>
+    
+        <!-- Question 53 -->
+        <div class="question">
+            <p>53. How do you target all elements inside a div, but not the div itself?</p>
+            <ul class="answers">
+                <li><span class="checkbox"></span> A. div *</li>
+                <li>B. div > *</li>
+                <li>C. div + *</li>
+                <li>D. div:inside</li>
+            </ul>
+        </div>
+    
+        <!-- Question 54 -->
+        <div class="question">
+            <p>54. How do you align flex items along the cross-axis?</p>
+            <ul class="answers">
+                <li>A. justify-content</li>
+                <li>B. align-content</li>
+                <li><span class="checkbox"></span> C. align-items</li>
+                <li>D. flex-align</li>
+            </ul>
+        </div>
+    
+        <!-- Question 55 -->
+        <div class="question">
+            <p>55. What does grid-auto-flow: column; do?</p>
+            <ul class="answers">
+                <li><span class="checkbox"></span> A. Arranges grid items by column instead of row</li>
+                <li>B. Reverses the column order</li>
+                <li>C. Aligns grid columns to the center</li>
+                <li>D. Automatically resizes columns</li>
+            </ul>
+        </div>
+    
+        <!-- Question 56 -->
+        <div class="question">
+            <p>56. What happens when place-items: start; is used in a grid container?</p>
+            <ul class="answers">
+                <li><span class="checkbox"></span> A. Aligns all grid items at the start of their grid cells</li>
+                <li>B. Aligns all grid items in the center</li>
+                <li>C. Expands the size of grid items</li>
+                <li>D. Aligns the grid container to the start</li>
+            </ul>
+        </div>
+    
+        <!-- Question 57 -->
+        <div class="question">
+            <p>57. Which property is used to apply a grid layout within a grid item?</p>
+            <ul class="answers">
+                <li>A. grid-sub</li>
+                <li>B. grid-template</li>
+                <li><span class="checkbox"></span> C. display: subgrid;</li>
+                <li>D. grid-container</li>
+            </ul>
+        </div>
+    
+        <!-- Question 58 -->
+        <div class="question">
+            <p>58. How do you define custom properties (CSS variables) in a document?</p>
+            <ul class="answers">
+                <li>A. @custom-variable {}</li>
+                <li>B. var(--property);</li>
+                <li><span class="checkbox"></span> C. :root { --property-name: value; }</li>
+                <li>D. define-var {}</li>
+            </ul>
+        </div>
+    
+        <!-- Question 59 -->
+        <div class="question">
+            <p>59. How do you control the spacing between flex items?</p>
+            <ul class="answers">
+                <li>A. flex-gap</li>
+                <li>B. flex-spacing</li>
+                <li><span class="checkbox"></span> C. gap</li>
+                <li>D. space-between</li>
+            </ul>
+        </div>
+    
+        <!-- Question 60 -->
+        <div class="question">
+            <p>60. How do you reset styles on a grid item?</p>
+            <ul class="answers">
+                <li>A. grid-reset</li>
+                <li>B. grid-auto-reset</li>
+                <li>C. grid-column-reset</li>
+                <li><span class="checkbox"></span> D. all: unset;</li>
+            </ul>
+        </div>
+
+            
+                   <p></p>
+                
+                </div>
+                
+    
+    
+    
+    
+    
+    
+    <!--inter quiz div-->        </div>
+    
+        
+        
+    </div>
+
+        <!-- Intermediate Text and Quiz Etc -->
+    <div id="advancedText" class="section hidden"> <h2>Expert</h2>
+        <p><h1>Advanced CSS</h1>
+
+            <h2>1. CSS Variables (Custom Properties)</h2>
+            <p>CSS Variables (also known as custom properties) allow you to store values in one place and reuse them throughout your stylesheet, making it easier to maintain and update styles.</p>
+            <p><strong>Basic Syntax:</strong></p>
+            <pre>
+            :root {
+                --main-bg-color: #ff6347;
+                --main-text-color: #333;
+            }
+            
+            body {
+                background-color: var(--main-bg-color);
+                color: var(--main-text-color);
+            }
+            </pre>
+            <p>In this example, the colors are stored in variables, and you can use them throughout the CSS using <code>var()</code>.</p>
+            
+            <h2>2. Advanced CSS Selectors</h2>
+            <p>CSS offers several advanced selectors that allow you to target elements with precision.</p>
+            <ul>
+                <li><strong>Attribute Selectors:</strong> Target elements based on the presence or value of attributes.</li>
+                <li><strong>Child Selectors:</strong> Select direct children of an element (e.g., <code>div &gt; p</code>).</li>
+                <li><strong>Adjacent Sibling Selectors:</strong> Select the element that is immediately preceded by a specified element (e.g., <code>h1 + p</code>).</li>
+                <li><strong>General Sibling Selectors:</strong> Select all elements that are preceded by a specified element (e.g., <code>h1 ~ p</code>).</li>
+            </ul>
+            <p><strong>Example:</strong></p>
+            <pre>
+            input[type="text"] {
+                background-color: lightblue;
+            }
+            
+            div > p {
+                font-size: 1.2em;
+            }
+            
+            h1 + p {
+                color: red;
+            }
+            
+            h1 ~ p {
+                font-style: italic;
+            }
+            </pre>
+            
+            <h2>3. CSS Grid Layout Advanced Techniques</h2>
+            <p>CSS Grid Layout is one of the most powerful layout systems available in CSS, and there are advanced techniques that make it even more flexible.</p>
+            <p><strong>Named Areas in Grid:</strong></p>
+            <pre>
+            .container {
+                display: grid;
+                grid-template-areas:
+                    "header header header"
+                    "nav content ads"
+                    "footer footer footer";
+                grid-gap: 10px;
+            }
+            
+            .header {
+                grid-area: header;
+            }
+            .nav {
+                grid-area: nav;
+            }
+            .content {
+                grid-area: content;
+            }
+            .ads {
+                grid-area: ads;
+            }
+            .footer {
+                grid-area: footer;
+            }
+            </pre>
+            
+            <h2>4. CSS Transforms</h2>
+            <p>CSS Transforms allow you to rotate, scale, skew, or translate elements. They provide a way to change the shape and position of an element.</p>
+            <p><strong>Basic Syntax:</strong></p>
+            <pre>
+            element {
+                transform: scale(1.5); /* Makes the element 50% larger */
+                transform: rotate(45deg); /* Rotates the element 45 degrees */
+                transform: translateX(20px); /* Moves the element 20px to the right */
+            }
+            </pre>
+            
+            <h2>5. CSS 3D Transforms</h2>
+            <p>CSS 3D transforms allow you to position elements in a three-dimensional space.</p>
+            <p><strong>Basic Syntax:</strong></p>
+            <pre>
+            element {
+                transform: perspective(400px) rotateX(45deg) rotateY(30deg);
+            }
+            </pre>
+            
+            <h2>6. CSS Transitions and Animations (Advanced)</h2>
+            <p>We can go beyond simple transitions with advanced animations. Using keyframes, you can create complex sequences of animations.</p>
+            <p><strong>Multiple Animations:</strong></p>
+            <pre>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes moveDown {
+                from {
+                    transform: translateY(-100px);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+            
+            element {
+                animation: fadeIn 1s ease-in, moveDown 1s ease-out;
+            }
+            </pre>
+            
+            <h2>7. CSS Shapes</h2>
+            <p>CSS Shapes allow you to create non-rectangular layouts, where content wraps around shapes such as circles, ellipses, and polygons.</p>
+            <p><strong>Example:</strong></p>
+            <pre>
+            img {
+                float: left;
+                shape-outside: circle(50%);
+                width: 200px;
+                height: 200px;
+            }
+            
+            p {
+                shape-inside: circle(50%);
+            }
+            </pre>
+            
+            <h2>8. Clip Path</h2>
+            <p><code>clip-path</code> allows you to create complex shapes by clipping an element to a specific shape.</p>
+            <p><strong>Basic Syntax:</strong></p>
+            <pre>
+            element {
+                clip-path: circle(50% at 50% 50%);
+                clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            }
+            </pre>
+            
+            <h2>9. CSS Filters</h2>
+            <p>CSS Filters apply effects such as blur, brightness, contrast, and more to an element.</p>
+            <p><strong>Example:</strong></p>
+            <pre>
+            img {
+                filter: blur(5px) brightness(0.8);
+            }
+            </pre>
+            
+            <h2>10. Custom Fonts and @font-face</h2>
+            <p>To use custom fonts in your project, you can use the <code>@font-face</code> rule to load external font files.</p>
+            <p><strong>Basic Syntax:</strong></p>
+            <pre>
+            @font-face {
+                font-family: 'MyCustomFont';
+                src: url('fonts/mycustomfont.woff2') format('woff2'),
+                     url('fonts/mycustomfont.woff') format('woff');
+            }
+            
+            body {
+                font-family: 'MyCustomFont', Arial, sans-serif;
+            }
+            </pre>
+            
+            <h2>11. Advanced Responsive Design Techniques</h2>
+            <p>Responsive design goes beyond media queries to include fluid layouts, flexible grids, and more.</p>
+            <ul>
+                <li><strong>Fluid Layouts:</strong> Use relative units like <code>vw</code>, <code>vh</code>, and percentages instead of fixed units like pixels.</li>
+                <li><strong>Advanced Media Queries:</strong> Target specifi
+            </p> 
+
+                <!--BEGINNER QUIZ-->
+
+        <div class="quiz-container">
+            <h2>Advanced CSS Quiz (60 Questions)</h2>
+
+
+                 <!-- Question 1 -->
+                    <!-- Question 1 -->
+    <div class="question">
+        <p>1. Which CSS property is used to create animations?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. @keyframes</li>
+            <li>B. animation-timing-function</li>
+            <li>C. transition</li>
+            <li>D. transform</li>
+        </ul>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>2. What does the animation-delay property do?</p>
+        <ul class="answers">
+            <li>A. Defines the time to start the animation after the page loads</li>
+            <li><span class="checkbox"></span> B. Specifies when the animation will start</li>
+            <li>C. Specifies the delay between animation iterations</li>
+            <li>D. Delays the completion of the animation</li>
+        </ul>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3. How do you apply multiple transitions to an element in CSS?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Separate transitions with commas</li>
+            <li>B. Separate transitions with semicolons</li>
+            <li>C. Apply transitions in multiple lines</li>
+            <li>D. Apply transitions using &transition</li>
+        </ul>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <p>4. Which of the following units is not relative to the viewport?</p>
+        <ul class="answers">
+            <li>A. vw</li>
+            <li>B. vh</li>
+            <li><span class="checkbox"></span> C. rem</li>
+            <li>D. vmin</li>
+        </ul>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <p>5. How do you make an animation loop infinitely?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. animation-iteration-count: infinite;</li>
+            <li>B. animation-count: loop;</li>
+            <li>C. animation-repeat: always;</li>
+            <li>D. iteration-count: 0;</li>
+        </ul>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <p>6. How do you reverse the direction of a CSS animation?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. animation-direction: reverse;</li>
+            <li>B. animation-reverse: true;</li>
+            <li>C. animation-play-state: reverse;</li>
+            <li>D. direction: reverse;</li>
+        </ul>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <p>7. What does the will-change property do?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. Allows you to define which properties will change for performance optimization</li>
+            <li>B. Changes the element visibility</li>
+            <li>C. Detects changes in the DOM</li>
+            <li>D. Disables transitions</li>
+        </ul>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <p>8. How do you apply different styles for high-resolution displays (e.g., retina displays)?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. @media (min-resolution: 192dpi) {}</li>
+            <li>B. @media (max-resolution: 300dpi) {}</li>
+            <li>C. @supports (resolution: retina)</li>
+            <li>D. @media (resolution: 2x) {}</li>
+        </ul>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <p>9. Which CSS function is used to create 3D transformations?</p>
+        <ul class="answers">
+            <li><span class="checkbox"></span> A. scaleZ()</li>
+            <li>B. translate()</li>
+            <li>C. rotate()</li>
+            <li>D. skew()</li>
+        </ul>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <p>10. What is the purpose of perspective() in CSS?</p>
+        <ul class="answers">
+            <li>A. Adjusts the viewing angle for 2D transformations</li>
+            <li><span class="checkbox"></span> B. Defines the distance between the user and the z-plane for 3D transformations</li>
+            <li>C. Rotates elements along the x-axis</li>
+            <li>D. Skews elements for a 3D effect</li>
+        </ul>
+    </div>
+
+    <!-- Question 11 -->
+<div class="question">
+    <p>11. How do you pause a CSS animation?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. animation-play-state: paused;</li>
+        <li>B. animation-state: stop;</li>
+        <li>C. animation-pause: true;</li>
+        <li>D. play-state: none;</li>
+    </ul>
+</div>
+
+<!-- Question 12 -->
+<div class="question">
+    <p>12. Which CSS property can be used to specify the timing function of a transition?</p>
+    <ul class="answers">
+        <li>A. transition-duration</li>
+        <li><span class="checkbox"></span> B. transition-timing-function</li>
+        <li>C. transition-delay</li>
+        <li>D. animation-timing</li>
+    </ul>
+</div>
+
+<!-- Question 13 -->
+<div class="question">
+    <p>13. How do you define a cubic-bezier timing function for an animation?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);</li>
+        <li>B. transition-timing: bezier(0.25, 0.1, 0.25, 1);</li>
+        <li>C. animation-function: cubic(0.25, 0.1, 0.25, 1);</li>
+        <li>D. animation-function: bezier()</li>
+    </ul>
+</div>
+
+<!-- Question 14 -->
+<div class="question">
+    <p>14. What does filter: blur(5px); do?</p>
+    <ul class="answers">
+        <li>A. Adds a shadow effect</li>
+        <li><span class="checkbox"></span> B. Blurs the element by 5 pixels</li>
+        <li>C. Scales the element</li>
+        <li>D. Changes the color saturation</li>
+    </ul>
+</div>
+
+<!-- Question 15 -->
+<div class="question">
+    <p>15. Which of the following is used to add grayscale to an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. filter: grayscale(1);</li>
+        <li>B. filter: gray(1);</li>
+        <li>C. filter: color(0);</li>
+        <li>D. filter: grayscale(100%);</li>
+    </ul>
+</div>
+
+<!-- Question 16 -->
+<div class="question">
+    <p>16. What does backface-visibility: hidden; do?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Hides the back of an element when it's flipped</li>
+        <li>B. Hides the front of an element</li>
+        <li>C. Hides all content</li>
+        <li>D. Makes the back of the element transparent</li>
+    </ul>
+</div>
+
+<!-- Question 17 -->
+<div class="question">
+    <p>17. How do you stagger animations using CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. By adjusting animation-delay for each element</li>
+        <li>B. By using animation-timing-function</li>
+        <li>C. By using @stagger</li>
+        <li>D. By applying transform-delay</li>
+    </ul>
+</div>
+
+<!-- Question 18 -->
+<div class="question">
+    <p>18. What is the default value for transform-origin?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. center center</li>
+        <li>B. left top</li>
+        <li>C. top right</li>
+        <li>D. middle center</li>
+    </ul>
+</div>
+
+<!-- Question 19 -->
+<div class="question">
+    <p>19. How do you create a smooth transition effect when changing the width of an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. transition: width 0.3s ease;</li>
+        <li>B. transition: smooth-width 0.3s;</li>
+        <li>C. animation: width-change 0.3s;</li>
+        <li>D. transition: width smooth;</li>
+    </ul>
+</div>
+
+<!-- Question 20 -->
+<div class="question">
+    <p>20. What is the purpose of the mix-blend-mode property?</p>
+    <ul class="answers">
+        <li>A. Changes the background color</li>
+        <li><span class="checkbox"></span> B. Specifies how an element's content should blend with the background</li>
+        <li>C. Blends two background images</li>
+        <li>D. Applies color filters to an element</li>
+    </ul>
+</div>
+
+<!-- Question 21 -->
+<div class="question">
+    <p>21. Which of the following is used to define a custom property (CSS variable)?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. --my-color: #ff0000;</li>
+        <li>B. #my-color: #ff0000;</li>
+        <li>C. var-color: #ff0000;</li>
+        <li>D. define-color: #ff0000;</li>
+    </ul>
+</div>
+
+<!-- Question 22 -->
+<div class="question">
+    <p>22. How do you use a CSS variable?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. color: var(--my-color);</li>
+        <li>B. color: --my-color;</li>
+        <li>C. color: $my-color;</li>
+        <li>D. color: css(--my-color);</li>
+    </ul>
+</div>
+
+<!-- Question 23 -->
+<div class="question">
+    <p>23. How do you define the order of animations?</p>
+    <ul class="answers">
+        <li>A. animation-sequence: 1, 2, 3;</li>
+        <li>B. animation-play-order: first, second, third;</li>
+        <li><span class="checkbox"></span> C. animation-delay: 0s, 1s, 2s;</li>
+        <li>D. @keyframes sequential {};</li>
+    </ul>
+</div>
+
+<!-- Question 24 -->
+<div class="question">
+    <p>24. What is the purpose of the clip-path property in CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Clips an element to a specific shape</li>
+        <li>B. Changes the z-index of an element</li>
+        <li>C. Clips the background image</li>
+        <li>D. Defines the transparency of an element</li>
+    </ul>
+</div>
+
+<!-- Question 25 -->
+<div class="question">
+    <p>25. How do you apply a triangular clip path to an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. clip-path: polygon(50% 0%, 0% 100%, 100% 100%);</li>
+        <li>B. clip-path: triangle(50%, 0%, 100%);</li>
+        <li>C. clip-path: shape(triangle);</li>
+        <li>D. clip-path: poly(50% 0%, 0% 100%, 100%);</li>
+    </ul>
+</div>
+
+<!-- Question 26 -->
+<div class="question">
+    <p>26. What does isolation do in CSS?</p>
+    <ul class="answers">
+        <li>A. Isolates an element from its container</li>
+        <li><span class="checkbox"></span> B. Defines whether an element’s blend mode will affect its children</li>
+        <li>C. Hides the element from rendering</li>
+        <li>D. Applies a z-index offset</li>
+    </ul>
+</div>
+
+<!-- Question 27 -->
+<div class="question">
+    <p>27. How do you make a CSS animation run only once?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. animation-iteration-count: 1;</li>
+        <li>B. animation-repeat: false;</li>
+        <li>C. animation-duration: 1;</li>
+        <li>D. animation-end: 1;</li>
+    </ul>
+</div>
+
+<!-- Question 28 -->
+<div class="question">
+    <p>28. How do you apply a transition on hover?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. element:hover { transition: all 0.3s; }</li>
+        <li>B. element:hover { animation: transition; }</li>
+        <li>C. element:hover { transform: 0.3s; }</li>
+        <li>D. element:hover { @transition; }</li>
+    </ul>
+</div>
+
+<!-- Question 29 -->
+<div class="question">
+    <p>29. Which property defines the point from where a transformation originates?</p>
+    <ul class="answers">
+        <li>A. transform-start</li>
+        <li>B. transform-position</li>
+        <li><span class="checkbox"></span> C. transform-origin</li>
+        <li>D. transform-point</li>
+    </ul>
+</div>
+
+<!-- Question 30 -->
+<div class="question">
+    <p>30. What does translateZ() do in CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Moves an element along the Z-axis</li>
+        <li>B. Moves an element along the X-axis</li>
+        <li>C. Translates the background color</li>
+        <li>D. Moves the element to a new position in 2D</li>
+    </ul>
+</div>
+
+<!-- Question 31 -->
+<div class="question">
+    <p>31. How do you create a repeating linear gradient?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. background: repeating-linear-gradient();</li>
+        <li>B. background: linear-gradient-repeat();</li>
+        <li>C. background: repeat-gradient();</li>
+        <li>D. background: gradient(linear, repeat);</li>
+    </ul>
+</div>
+
+<!-- Question 32 -->
+<div class="question">
+    <p>32. Which property applies a 3D perspective to an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. perspective</li>
+        <li>B. z-index</li>
+        <li>C. transform</li>
+        <li>D. scaleZ</li>
+    </ul>
+</div>
+
+<!-- Question 33 -->
+<div class="question">
+    <p>33. How do you reset all CSS properties of an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. all: unset;</li>
+        <li>B. reset: all;</li>
+        <li>C. clear: all;</li>
+        <li>D. undo: all;</li>
+    </ul>
+</div>
+
+<!-- Question 34 -->
+<div class="question">
+    <p>34. How do you add an image mask to an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. mask-image: url('mask.png');</li>
+        <li>B. image-mask: url('mask.png');</li>
+        <li>C. mask: url('mask.png');</li>
+        <li>D. mask-style: image('mask.png');</li>
+    </ul>
+</div>
+
+<!-- Question 35 -->
+<div class="question">
+    <p>35. What is object-fit used for?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Specifies how an image or video should fit within its container</li>
+        <li>B. Defines the object's display size</li>
+        <li>C. Adjusts the object size relative to the viewport</li>
+        <li>D. Defines the alignment of an object</li>
+    </ul>
+</div>
+
+<!-- Question 36 -->
+<div class="question">
+    <p>36. Which value of transform scales an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. scale()</li>
+        <li>B. rotate()</li>
+        <li>C. translate()</li>
+        <li>D. skew()</li>
+    </ul>
+</div>
+
+<!-- Question 37 -->
+<div class="question">
+    <p>37. What does animation-fill-mode: forwards; do?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Keeps the animation's final state after it finishes</li>
+        <li>B. Moves the animation forward in time</li>
+        <li>C. Runs the animation in reverse</li>
+        <li>D. Resets the animation after it completes</li>
+    </ul>
+</div>
+
+<!-- Question 38 -->
+<div class="question">
+    <p>38. Which property allows you to set a delay before a transition starts?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. transition-delay</li>
+        <li>B. transition-start</li>
+        <li>C. animation-delay</li>
+        <li>D. timing-delay</li>
+    </ul>
+</div>
+
+<!-- Question 39 -->
+<div class="question">
+    <p>39. How do you invert the colors of an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. filter: invert(100%);</li>
+        <li>B. filter: color-invert;</li>
+        <li>C. invert-color: true;</li>
+        <li>D. filter: grayscale(100%);</li>
+    </ul>
+</div>
+
+<!-- Question 40 -->
+<div class="question">
+    <p>40. What is the default value of z-index?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. 0</li>
+        <li>B. 1</li>
+        <li>C. auto</li>
+        <li>D. none</li>
+    </ul>
+</div>
+
+<!-- Question 41 -->
+<div class="question">
+    <p>41. How do you create a circular clipping path around an image?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. clip-path: circle(50% at 50% 50%);</li>
+        <li>B. clip-path: round(50%);</li>
+        <li>C. mask-image: circle(50%);</li>
+        <li>D. clip: circle(50% 50%);</li>
+    </ul>
+</div>
+
+<!-- Question 42 -->
+<div class="question">
+    <p>42. How do you apply CSS Grid within a flex container?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. display: grid;</li>
+        <li>B. display: flex-grid;</li>
+        <li>C. grid: flex;</li>
+        <li>D. grid-flex: display;</li>
+    </ul>
+</div>
+
+<!-- Question 43 -->
+<div class="question">
+    <p>43. How do you create a skew effect in CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. transform: skew(20deg);</li>
+        <li>B. animation: skew(20deg);</li>
+        <li>C. transform: rotate(20deg);</li>
+        <li>D. rotate: skew(20deg);</li>
+    </ul>
+</div>
+
+<!-- Question 44 -->
+<div class="question">
+    <p>44. How do you scale an element on the X-axis?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. transform: scaleX(1.5);</li>
+        <li>B. transform: scale(1.5);</li>
+        <li>C. transform: scaleZ(1.5);</li>
+        <li>D. scale: X(1.5);</li>
+    </ul>
+</div>
+
+<!-- Question 45 -->
+<div class="question">
+    <p>45. How do you apply a blur effect to the background but not the text inside an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Apply backdrop-filter: blur(5px);</li>
+        <li>B. Apply filter: blur(5px);</li>
+        <li>C. Apply blur-filter: background;</li>
+        <li>D. Apply background-blur: 5px;</li>
+    </ul>
+</div>
+
+<!-- Question 46 -->
+<div class="question">
+    <p>46. How do you create an animation that moves an element from left to right?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Use @keyframes to define a left-to-right animation</li>
+        <li>B. Use transition-left for movement</li>
+        <li>C. Apply transform: move-right;</li>
+        <li>D. Use @moveframes to animate</li>
+    </ul>
+</div>
+
+<!-- Question 47 -->
+<div class="question">
+    <p>47. What is the purpose of the contain property in CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Limits the element's effects to its own container for better performance</li>
+        <li>B. Contains the element's background</li>
+        <li>C. Aligns the container</li>
+        <li>D. Expands the element size</li>
+    </ul>
+</div>
+
+<!-- Question 48 -->
+<div class="question">
+    <p>48. How do you create a delay before an animation starts?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. animation-delay: 2s;</li>
+        <li>B. animation-start: 2s;</li>
+        <li>C. transition-delay: 2s;</li>
+        <li>D. animation-timing: 2s;</li>
+    </ul>
+</div>
+
+<!-- Question 49 -->
+<div class="question">
+    <p>49. Which property is used to animate the background position?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. background-position</li>
+        <li>B. background-transform</li>
+        <li>C. background-scale</li>
+        <li>D. background-flow</li>
+    </ul>
+</div>
+
+<!-- Question 50 -->
+<div class="question">
+    <p>50. What does perspective-origin control?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Defines the vanishing point for 3D transformed elements</li>
+        <li>B. Defines the element's rotation axis</li>
+        <li>C. Defines the element's z-index</li>
+        <li>D. Controls the height of the 3D element</li>
+    </ul>
+</div>
+
+<!-- Question 51 -->
+<div class="question">
+    <p>51. Which property is used to create a reflection of an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. box-reflect: below;</li>
+        <li>B. reflection: on;</li>
+        <li>C. transform: reflect;</li>
+        <li>D. mirror: true;</li>
+    </ul>
+</div>
+
+<!-- Question 52 -->
+<div class="question">
+    <p>52. How do you create a responsive grid layout that changes based on screen size?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Use media queries with CSS Grid</li>
+        <li>B. Use z-index with CSS Grid</li>
+        <li>C. Use flexbox and media queries</li>
+        <li>D. Use grid-size with flexbox</li>
+    </ul>
+</div>
+
+<!-- Question 53 -->
+<div class="question">
+    <p>53. What does scroll-snap-type do?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Controls where scroll snapping occurs</li>
+        <li>B. Stops scroll events</li>
+        <li>C. Snaps elements to grid lines</li>
+        <li>D. Defines the scroll direction</li>
+    </ul>
+</div>
+
+<!-- Question 54 -->
+<div class="question">
+    <p>54. Which property defines how an element should behave when content is too large to fit in its box?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. overflow</li>
+        <li>B. content-fit</li>
+        <li>C. box-sizing</li>
+        <li>D. contain</li>
+    </ul>
+</div>
+
+<!-- Question 55 -->
+<div class="question">
+    <p>55. What is the function of transition-property in CSS?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. Specifies the CSS property to which a transition effect is applied</li>
+        <li>B. Specifies the duration of the transition</li>
+        <li>C. Specifies the delay before the transition starts</li>
+        <li>D. Specifies the timing function of the transition</li>
+    </ul>
+</div>
+
+<!-- Question 56 -->
+<div class="question">
+    <p>56. How do you hide an element while keeping its space on the page?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. visibility: hidden;</li>
+        <li>B. display: none;</li>
+        <li>C. opacity: 0;</li>
+        <li>D. hide: true;</li>
+    </ul>
+</div>
+
+<!-- Question 57 -->
+<div class="question">
+    <p>57. Which property is used to control the width of an element's border?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. border-width</li>
+        <li>B. border-size</li>
+        <li>C. border-spacing</li>
+        <li>D. border-style</li>
+    </ul>
+</div>
+
+<!-- Question 58 -->
+<div class="question">
+    <p>58. How do you prevent text from wrapping inside an element?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. white-space: nowrap;</li>
+        <li>B. text-wrap: none;</li>
+        <li>C. text-nowrap: true;</li>
+        <li>D. white-space: no-wrap;</li>
+    </ul>
+</div>
+
+<!-- Question 59 -->
+<div class="question">
+    <p>59. Which property is used to define the duration of an animation?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. animation-duration</li>
+        <li>B. animation-time</li>
+        <li>C. transition-duration</li>
+        <li>D. animation-speed</li>
+    </ul>
+</div>
+
+<!-- Question 60 -->
+<div class="question">
+    <p>60. How do you apply CSS Grid to create both rows and columns in a layout?</p>
+    <ul class="answers">
+        <li><span class="checkbox"></span> A. display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;</li>
+        <li>B. display: flex; grid-template: 1fr 1fr;</li>
+        <li>C. grid-display: row column;</li>
+        <li>D. grid: columns(2) rows(2);</li>
+    </ul>
+</div>
+        
+               <p></p>
+            
+            </div>
+            
+
+
+
+
+
+
+<!--quiz div-->        </div>
+
+            
+        </div>
+
+
+  
+   
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
