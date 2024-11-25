@@ -1,0 +1,99 @@
+/* General body styling */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    color: #00ff00;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Typewriter effect styling */
+h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    color: #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #00ff00;
+    width: fit-content;
+    padding-right: 5px;
+}
+
+/* Navbar styling (Initially hidden with opacity) */
+#navbar {
+    opacity: 0; /* Initially invisible */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* When the class 'show' is added, the navbar will fade in */
+#navbar.show {
+    opacity: 1;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#navbar ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #00ff00;
+}
+
+/* Hidden class for sections */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+
+h2 {
+    color: #ff0000;
+
+}
+
+
+.question {
+    margin: 20px 0;
+}
+.answers {
+    margin-left: 20px;
+}
+.correct {
+    color: green;
+}
+.answers li {
+    list-style: none;
+}
+.checkbox {
+    color: green;
+    margin-right: 10px;
+}
+.checkbox::before {
+    content: '✔';
+
+}
+
+
+
+
+
+
